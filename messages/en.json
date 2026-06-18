@@ -1,0 +1,135 @@
+{
+  "common": {
+    "appName": "BlueBook",
+    "slogan": "Mark Your Hardcore Life",
+    "loading": "Loading...",
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "more": "More",
+    "back": "Back",
+    "search": "Search",
+    "noResults": "No results found",
+    "pullToRefresh": "Pull to refresh",
+    "releaseToRefresh": "Release to refresh",
+    "refreshing": "Refreshing..."
+  },
+  "nav": {
+    "home": "Home",
+    "discover": "Discover",
+    "create": "Post",
+    "messages": "Messages",
+    "profile": "Profile"
+  },
+  "feed": {
+    "recommended": "For You",
+    "following": "Following",
+    "allCategories": "All",
+    "hotPosts": "Trending",
+    "latest": "Latest",
+    "hot": "Hot"
+  },
+  "sections": {
+    "awareness": {
+      "name": "Awareness Academy",
+      "desc": "See Through the Tricks",
+      "fullDesc": "Anti-manipulation / Emotional Awareness"
+    },
+    "social": {
+      "name": "Social Observatory",
+      "desc": "Decode Social Dynamics",
+      "fullDesc": "Social Media Analysis / Behavior Patterns"
+    },
+    "gaming": {
+      "name": "Gaming Camp",
+      "desc": "Hardcore Gamers United",
+      "fullDesc": "Guides / Reviews / Teams / Esports"
+    },
+    "fitness": {
+      "name": "Iron Gym",
+      "desc": "Let the Iron Talk",
+      "fullDesc": "Fitness / Health / Posture"
+    },
+    "finance": {
+      "name": "Money Lab",
+      "desc": "Making Money is Serious Business",
+      "fullDesc": "Side Hustles / Investing / Real Estate"
+    }
+  },
+  "post": {
+    "rationalAnalysis": "Analysis",
+    "hotComments": "Hot Comments",
+    "writeComment": "Write your analysis...",
+    "likes": "Likes",
+    "bookmarks": "Bookmarks",
+    "shares": "Shares",
+    "comments": "Comments",
+    "reply": "Reply",
+    "report": "Report",
+    "notInterested": "Not Interested",
+    "shareToWechat": "Share to WeChat",
+    "copyLink": "Copy Link"
+  },
+  "create": {
+    "title": "Create New Post",
+    "imageText": "Image & Text",
+    "longText": "Long Form",
+    "poll": "Poll",
+    "addTitle": "Add a title",
+    "addContent": "Write your content...",
+    "addImages": "Add images",
+    "selectSection": "Select Section",
+    "aiSuggest": "AI Title Suggest",
+    "aiSuggesting": "AI is thinking...",
+    "publish": "Publish",
+    "contentTag": "Content Tag",
+    "personalExp": "Personal Experience",
+    "professional": "Professional Advice",
+    "forReference": "For Reference Only",
+    "pollQuestion": "Poll Question",
+    "addOption": "Add Option"
+  },
+  "profile": {
+    "influenceScore": "Hardcore Index",
+    "myPosts": "My Posts",
+    "myBookmarks": "Bookmarks",
+    "myLikes": "Liked",
+    "achievements": "Achievements",
+    "editProfile": "Edit Profile",
+    "followers": "Followers",
+    "following": "Following",
+    "posts": "Posts",
+    "joinedAt": "Joined",
+    "settings": "Settings",
+    "logout": "Log Out"
+  },
+  "auth": {
+    "login": "Log In",
+    "register": "Sign Up",
+    "phonePlaceholder": "Enter phone number",
+    "codePlaceholder": "Enter verification code",
+    "sendCode": "Send Code",
+    "resendCode": "Resend",
+    "loginSuccess": "Login Successful",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "agreeTerms": "By logging in, you agree to the Community Guidelines and Terms of Service"
+  },
+  "messages": {
+    "comments": "Comments",
+    "likes": "Likes",
+    "system": "System",
+    "directMessages": "Direct Messages",
+    "noMessages": "No messages yet"
+  },
+  "search": {
+    "placeholder": "Search posts, users, tags",
+    "trending": "Trending Topics",
+    "filters": "Filters",
+    "allSections": "All Sections",
+    "sortBy": "Sort By"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "common": {
+    "appName": "小蓝书",
+    "slogan": "标记你的硬核生活",
+    "loading": "加载中...",
+    "retry": "重试",
+    "cancel": "取消",
+    "confirm": "确认",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "more": "更多",
+    "back": "返回",
+    "search": "搜索",
+    "noResults": "没有找到相关内容",
+    "pullToRefresh": "下拉刷新",
+    "releaseToRefresh": "松开刷新",
+    "refreshing": "刷新中..."
+  },
+  "nav": {
+    "home": "首页",
+    "discover": "发现",
+    "create": "发布",
+    "messages": "消息",
+    "profile": "我的"
+  },
+  "feed": {
+    "recommended": "推荐",
+    "following": "关注",
+    "allCategories": "全部",
+    "hotPosts": "热门榜单",
+    "latest": "最新",
+    "hot": "最热"
+  },
+  "sections": {
+    "awareness": {
+      "name": "清醒学堂",
+      "desc": "识破套路，保持清醒",
+      "fullDesc": "防PUA / 防捞女 / 情感认知"
+    },
+    "social": {
+      "name": "社交观察室",
+      "desc": "看透社交本质",
+      "fullDesc": "朋友圈现象解读 / 社交动态分析"
+    },
+    "gaming": {
+      "name": "游戏营地",
+      "desc": "硬核玩家聚集地",
+      "fullDesc": "攻略 / 评测 / 组队 / 电竞"
+    },
+    "fitness": {
+      "name": "铁馆",
+      "desc": "用铁说话",
+      "fullDesc": "健身 / 健康 / 体态"
+    },
+    "finance": {
+      "name": "搞钱研究院",
+      "desc": "搞钱是正经事",
+      "fullDesc": "副业 / 理财 / 房产"
+    }
+  },
+  "post": {
+    "rationalAnalysis": "理性分析",
+    "hotComments": "热门评论",
+    "writeComment": "写下你的分析...",
+    "likes": "赞",
+    "bookmarks": "收藏",
+    "shares": "分享",
+    "comments": "评论",
+    "reply": "回复",
+    "report": "举报",
+    "notInterested": "不感兴趣",
+    "shareToWechat": "分享到微信",
+    "copyLink": "复制链接"
+  },
+  "create": {
+    "title": "发布新内容",
+    "imageText": "图文",
+    "longText": "长文",
+    "poll": "投票",
+    "addTitle": "添加标题",
+    "addContent": "写下你的内容...",
+    "addImages": "添加图片",
+    "selectSection": "选择板块",
+    "aiSuggest": "AI推荐标题",
+    "aiSuggesting": "AI正在思考...",
+    "publish": "发布",
+    "contentTag": "内容声明",
+    "personalExp": "个人经验",
+    "professional": "专业建议",
+    "forReference": "仅供参考",
+    "pollQuestion": "投票问题",
+    "addOption": "添加选项"
+  },
+  "profile": {
+    "influenceScore": "硬核指数",
+    "myPosts": "我的帖子",
+    "myBookmarks": "收藏",
+    "myLikes": "赞过",
+    "achievements": "成就徽章",
+    "editProfile": "编辑资料",
+    "followers": "粉丝",
+    "following": "关注",
+    "posts": "帖子",
+    "joinedAt": "加入于",
+    "settings": "设置",
+    "logout": "退出登录"
+  },
+  "auth": {
+    "login": "登录",
+    "register": "注册",
+    "phonePlaceholder": "请输入手机号",
+    "codePlaceholder": "请输入验证码",
+    "sendCode": "发送验证码",
+    "resendCode": "重新发送",
+    "loginSuccess": "登录成功",
+    "noAccount": "还没有账号？",
+    "hasAccount": "已有账号？",
+    "agreeTerms": "登录即表示同意社区公约和服务条款"
+  },
+  "messages": {
+    "comments": "评论",
+    "likes": "点赞",
+    "system": "系统",
+    "directMessages": "私信",
+    "noMessages": "暂无消息"
+  },
+  "search": {
+    "placeholder": "搜索帖子、用户、标签",
+    "trending": "热门话题",
+    "filters": "筛选",
+    "allSections": "全部板块",
+    "sortBy": "排序方式"
+  }
+}

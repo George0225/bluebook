@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd D:/ClaudeProject/bluebook && ls node_modules/.bin/next 2>&1)"
+    ]
+  }
+}
