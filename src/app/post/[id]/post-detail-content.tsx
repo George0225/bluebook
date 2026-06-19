@@ -8,7 +8,7 @@ import { LikeButton } from "@/components/post/like-button";
 import { BookmarkButton } from "@/components/post/bookmark-button";
 import { TagBadge } from "@/components/shared/tag-badge";
 import { useI18n } from "@/i18n/provider";
-import { getPostById } from "@/data/mock-posts";
+import { usePosts } from "@/hooks/use-posts";
 import { getCommentsByPostId } from "@/data/mock-comments";
 import { SECTIONS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -17,8 +17,17 @@ import { useState } from "react";
 export function PostDetailContent({ postId }: { postId: string }) {
   const { t } = useI18n();
   const [commentTab, setCommentTab] = useState<"analysis" | "hot">("hot");
+  const { singlePost: post, loading } = usePosts({ type: "single", postId });
 
-  const post = getPostById(postId);
+  if (loading) {
+    return (
+      <ResponsiveShell showBack>
+        <div className="flex items-center justify-center py-20 text-bb-text-3">
+          <div className="h-6 w-6 animate-spin rounded-full border-2 border-bb-amber border-t-transparent" />
+        </div>
+      </ResponsiveShell>
+    );
+  }
 
   if (!post) {
     return (

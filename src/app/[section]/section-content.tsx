@@ -5,7 +5,7 @@ import { ResponsiveShell } from "@/components/layout/responsive-shell";
 import { CSS3DGrid } from "@/components/feed/css3d-grid";
 import { useI18n } from "@/i18n/provider";
 import { useResponsive } from "@/hooks/use-responsive";
-import { getPostsBySection } from "@/data/mock-posts";
+import { usePosts } from "@/hooks/use-posts";
 import { SECTIONS } from "@/lib/constants";
 import type { SectionId } from "@/types/post";
 
@@ -14,9 +14,9 @@ const iconMap = { Shield, Search, Gamepad2, Dumbbell, TrendingUp } as const;
 export function SectionContent({ sectionId }: { sectionId: string }) {
   const { t } = useI18n();
   const breakpoint = useResponsive();
+  const { posts, loading, error } = usePosts({ type: "section", sectionId: sectionId as SectionId });
 
   const section = SECTIONS[sectionId as SectionId];
-  const posts = getPostsBySection(sectionId as SectionId);
   const Icon = iconMap[section.icon as keyof typeof iconMap];
   const gridColumns = breakpoint === "mobile" ? 2 : 3;
 
@@ -36,7 +36,15 @@ export function SectionContent({ sectionId }: { sectionId: string }) {
         </div>
       </div>
 
-      {posts.length > 0 ? (
+      {loading ? (
+        <div className="flex items-center justify-center py-20 text-bb-text-3">
+          <div className="h-6 w-6 animate-spin rounded-full border-2 border-bb-amber border-t-transparent" />
+        </div>
+      ) : error ? (
+        <div className="flex items-center justify-center py-20 text-sm text-bb-text-3">
+          加载失败，请稍后再试
+        </div>
+      ) : posts.length > 0 ? (
         <CSS3DGrid posts={posts} columns={gridColumns} />
       ) : (
         <div className="flex items-center justify-center py-20 text-sm text-bb-text-3">

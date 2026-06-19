@@ -7,15 +7,16 @@ import { FeedTabs } from "@/components/feed/feed-tabs";
 import { CSS3DGrid } from "@/components/feed/css3d-grid";
 import { useFeedStore } from "@/stores/feed-store";
 import { useResponsive } from "@/hooks/use-responsive";
-import { mockPosts } from "@/data/mock-posts";
+import { usePosts } from "@/hooks/use-posts";
 import type { SectionId } from "@/types/post";
 
 export default function HomePage() {
   const { activeTab, activeSection, setTab, setSection } = useFeedStore();
   const breakpoint = useResponsive();
+  const { posts: allPosts, loading, error } = usePosts({ type: "all" });
 
   const filteredPosts = useMemo(() => {
-    let posts = mockPosts;
+    let posts = allPosts;
     if (activeSection !== "all") {
       posts = posts.filter((p) => p.sectionId === activeSection);
     }
@@ -23,7 +24,7 @@ export default function HomePage() {
       posts = posts.filter((p) => ["u1", "u2", "u4", "u5"].includes(p.author.id));
     }
     return posts;
-  }, [activeTab, activeSection]);
+  }, [activeTab, activeSection, allPosts]);
 
   const gridColumns = breakpoint === "mobile" ? 2 : 3;
 
@@ -35,7 +36,15 @@ export default function HomePage() {
           activeSection={activeSection as SectionId | "all"}
           onSectionChange={setSection}
         />
-        {filteredPosts.length > 0 ? (
+        {loading ? (
+          <div className="flex items-center justify-center py-20 text-bb-text-3">
+            <div className="h-6 w-6 animate-spin rounded-full border-2 border-bb-amber border-t-transparent" />
+          </div>
+        ) : error ? (
+          <div className="flex items-center justify-center py-20 text-sm text-bb-text-3">
+            加载失败，请稍后再试
+          </div>
+        ) : filteredPosts.length > 0 ? (
           <CSS3DGrid posts={filteredPosts} columns={gridColumns} />
         ) : (
           <div className="flex flex-col items-center justify-center py-20 text-bb-text-3">
