@@ -127,6 +127,13 @@
   --bb-radius-badge: 4px;
   --bb-shadow-card: 2px 2px 0px rgba(0, 0, 0, 0.3);
   --bb-shadow-elevated: 4px 4px 0px rgba(0, 0, 0, 0.4);
+
+  /* 3D CSS fallback tokens */
+  --bb-3d-perspective: 1200px;
+  --bb-3d-hover-lift: 20px;
+  --bb-3d-flip-duration: 500ms;
+  --bb-3d-hover-rotate: 5deg;
+
   --bb-shadow-button: 2px 2px 0px rgba(0, 0, 0, 0.5);
 }
 

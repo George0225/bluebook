@@ -4,7 +4,7 @@ import { useMemo } from "react";
 import { ResponsiveShell } from "@/components/layout/responsive-shell";
 import { CategoryTabs } from "@/components/layout/category-tabs";
 import { FeedTabs } from "@/components/feed/feed-tabs";
-import { IndustrialGrid } from "@/components/feed/industrial-grid";
+import { CSS3DGrid } from "@/components/feed/css3d-grid";
 import { useFeedStore } from "@/stores/feed-store";
 import { useResponsive } from "@/hooks/use-responsive";
 import { mockPosts } from "@/data/mock-posts";
@@ -36,7 +36,7 @@ export default function HomePage() {
           onSectionChange={setSection}
         />
         {filteredPosts.length > 0 ? (
-          <IndustrialGrid posts={filteredPosts} columns={gridColumns} />
+          <CSS3DGrid posts={filteredPosts} columns={gridColumns} />
         ) : (
           <div className="flex flex-col items-center justify-center py-20 text-bb-text-3">
             <p className="text-sm">暂无内容</p>
