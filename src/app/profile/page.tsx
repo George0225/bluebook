@@ -50,7 +50,7 @@ export default function ProfilePage() {
             color={user.avatarColor}
             initial={user.avatarInitial}
             size="xl"
-            className="mx-auto ring-2 ring-bb-amber ring-offset-2 ring-offset-bb-surface-0"
+            className="mx-auto"
           />
           <div>
             <h1 className="text-lg font-bold text-bb-text-1">{user.name}</h1>
