@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(cd D:/ClaudeProject/bluebook && ls node_modules/.bin/next 2>&1)"
+      "Bash(cd D:/ClaudeProject/bluebook && ls node_modules/.bin/next 2>&1)",
+      "Bash(find D:\\\\ClaudeProject\\\\bluebook\\\\node_modules\\\\shadcn -name \"tailwind.css\" 2>nul | head -5)",
+      "Bash(cd /d/ClaudeProject/bluebook && npx next build 2>&1 | tail -30)"
     ]
   }
 }

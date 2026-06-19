@@ -8,10 +8,8 @@ interface CSS3DGridProps {
   columns?: 2 | 3;
 }
 
-const staggerPatterns3 = [0, -12, 8, 16, -8, 12, 0, -16, 8];
-const staggerPatterns2 = [0, -12, 8, -8, 16, 0];
-const rotPatterns3 = [0, -2, 3, -1, 2, 1, 0, -3, 2];
-const rotPatterns2 = [0, -2, 3, -1, 2, 1];
+const staggerPatterns3 = [0, -14, 10, 18, -10, 14, 0, -18, 10];
+const staggerPatterns2 = [0, -14, 10, -10, 18, 0];
 
 export function CSS3DGrid({ posts, columns = 3 }: CSS3DGridProps) {
   const getSize = (i: number) => {
@@ -24,19 +22,14 @@ export function CSS3DGrid({ posts, columns = 3 }: CSS3DGridProps) {
     return pattern[i % pattern.length];
   };
 
-  const getRotate = (i: number) => {
-    const pattern = columns === 3 ? rotPatterns3 : rotPatterns2;
-    return pattern[i % pattern.length];
-  };
-
   return (
-    <div className="px-4 py-4">
+    <div className="px-4 py-6">
       <div
         style={{
           display: "grid",
           gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
           gridAutoRows: "minmax(120px, auto)",
-          gap: "12px",
+          gap: "14px",
         }}
       >
         {posts.map((post, i) => {
@@ -50,6 +43,7 @@ export function CSS3DGrid({ posts, columns = 3 }: CSS3DGridProps) {
                 post={post}
                 size={size}
                 stagger={getStagger(i)}
+                index={i}
               />
             </div>
           );

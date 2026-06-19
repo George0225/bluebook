@@ -33,7 +33,7 @@ export function CategoryTabs({ activeSection, onSectionChange }: CategoryTabsPro
   ];
 
   return (
-    <div className="sticky top-14 z-30 bg-bb-surface-0/95 backdrop-blur-sm border-b border-bb-border">
+    <div className="sticky top-14 z-30 glass border-b border-white/5">
       <div className="flex overflow-x-auto hide-scrollbar px-4 gap-2 py-2.5">
         {allTabs.map((tab) => {
           const isActive = activeSection === tab.id;
@@ -44,11 +44,12 @@ export function CategoryTabs({ activeSection, onSectionChange }: CategoryTabsPro
               key={tab.id}
               onClick={() => onSectionChange(tab.id)}
               className={cn(
-                "flex items-center gap-1.5 whitespace-nowrap rounded-full px-3.5 py-1.5 text-sm font-medium transition-all",
+                "flex items-center gap-1.5 whitespace-nowrap rounded-full px-3.5 py-1.5 text-sm font-medium transition-all duration-300",
                 isActive
-                  ? "bg-bb-amber text-bb-surface-0 shadow-bb-button"
-                  : "bg-bb-surface-2 text-bb-text-2 hover:bg-bb-surface-3 hover:text-bb-text-1"
+                  ? "bg-gradient-to-r from-bb-amber to-bb-gold text-bb-surface-0 shadow-bb-button"
+                  : "bg-white/5 text-bb-text-2 hover:bg-white/10 hover:text-bb-text-1 hover:scale-105"
               )}
+              style={isActive ? { boxShadow: "0 0 16px rgba(232,120,42,0.3)" } : undefined}
             >
               {IconComponent && <IconComponent className="h-3.5 w-3.5" strokeWidth={2} />}
               {tab.label}

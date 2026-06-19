@@ -14,17 +14,38 @@ const sizeMap = {
   xl: "h-20 w-20 text-2xl",
 };
 
+const ringSize = {
+  sm: "h-7 w-7",
+  md: "h-9 w-9",
+  lg: "h-14 w-14",
+  xl: "h-22 w-22",
+};
+
 export function GradientAvatar({ color, initial, size = "md", className }: GradientAvatarProps) {
   return (
-    <div
-      className={cn(
-        "rounded-full flex items-center justify-center flex-shrink-0 font-bold text-white shadow-sm",
-        sizeMap[size],
-        className
-      )}
-      style={{ background: color }}
-    >
-      {initial}
+    <div className={cn("relative flex-shrink-0 group", className)}>
+      {/* Rotating ring on hover */}
+      <div
+        className={cn(
+          "absolute inset-[-2px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300",
+          ringSize[size]
+        )}
+        style={{
+          background: `conic-gradient(from 0deg, ${color.includes("gradient") ? "#E8782A" : color.split(",")[0]?.replace(/.*#/, "#") || "#E8782A"}, #7B68EE, #5B9BD5, ${color.includes("gradient") ? "#E8782A" : color.split(",")[0]?.replace(/.*#/, "#") || "#E8782A"})`,
+          animation: "ring-rotate 2s linear infinite",
+          WebkitMask: "radial-gradient(farthest-side, transparent calc(100% - 2px), #fff calc(100% - 2px))",
+          mask: "radial-gradient(farthest-side, transparent calc(100% - 2px), #fff calc(100% - 2px))",
+        }}
+      />
+      <div
+        className={cn(
+          "rounded-full flex items-center justify-center font-bold text-white relative z-10",
+          sizeMap[size]
+        )}
+        style={{ background: color }}
+      >
+        {initial}
+      </div>
     </div>
   );
 }
