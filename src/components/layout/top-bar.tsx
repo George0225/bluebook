@@ -46,8 +46,8 @@ export function TopBar({ showBack, title, onMenuClick }: TopBarProps) {
         )}
 
         {/* Search with animated focus glow */}
-        <div className={`flex-1 max-w-md mx-auto transition-all duration-300 ${searchFocused ? "max-w-lg" : ""}`}>
-          <div className={`flex items-center gap-2 rounded-lg px-3 py-2 transition-all duration-300 ${searchFocused ? "bg-bb-surface-2/80 shadow-[0_0_20px_rgba(232,120,42,0.15)] border border-bb-amber/30" : "bg-bb-surface-2/60 border border-transparent"}`}>
+        <div className={`flex-1 max-w-md mx-auto transition-[max-width] duration-300 ${searchFocused ? "max-w-lg" : ""}`}>
+          <div className={`flex items-center gap-2 rounded-lg px-3 py-2 transition-[background-color,box-shadow,border-color] duration-300 ${searchFocused ? "bg-bb-surface-2/80 shadow-[0_0_20px_rgba(232,120,42,0.15)] border border-bb-amber/30" : "bg-bb-surface-2/60 border border-transparent"}`}>
             <Search className={`h-4 w-4 flex-shrink-0 transition-colors ${searchFocused ? "text-bb-amber" : "text-bb-text-3"}`} />
             <input
               onFocus={() => setSearchFocused(true)}
@@ -61,11 +61,11 @@ export function TopBar({ showBack, title, onMenuClick }: TopBarProps) {
         {/* Right actions */}
         <div className="flex items-center gap-2">
           <LocaleToggle />
-          <button className="relative p-2 rounded-lg hover:bg-white/5 transition-all duration-200">
+          <button className="relative p-2 rounded-lg hover:bg-white/5 transition-colors duration-200">
             <Bell className="h-5 w-5 text-bb-text-2" />
             <span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-bb-amber animate-pulse" style={{ boxShadow: "0 0 6px rgba(232,120,42,0.8)" }} />
           </button>
-          <button className="p-1 rounded-lg hover:bg-white/5 transition-all duration-200">
+          <button className="p-1 rounded-lg hover:bg-white/5 transition-colors duration-200">
             <GradientAvatar
               color={user.avatarColor}
               initial={user.avatarInitial}

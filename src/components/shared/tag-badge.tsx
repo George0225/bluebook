@@ -10,7 +10,7 @@ export function TagBadge({ label, color, className }: TagBadgeProps) {
   return (
     <span
       className={cn(
-        "inline-flex items-center rounded-md px-2 py-0.5 text-[10px] font-medium backdrop-blur-sm transition-all duration-200 hover:scale-105",
+        "inline-flex items-center rounded-md px-2 py-0.5 text-[10px] font-medium transition-transform duration-200 hover:scale-105",
         className
       )}
       style={color ? {

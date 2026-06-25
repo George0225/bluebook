@@ -166,41 +166,9 @@
    AVANT-GARDE ANIMATIONS
    ═══════════════════════════════════════════ */
 
-@keyframes aurora {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes border-rotate {
-  from { --angle: 0deg; }
-  to { --angle: 360deg; }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-
-@keyframes glow-pulse {
-  0%, 100% { opacity: 0.6; box-shadow: 0 0 15px currentColor; }
-  50% { opacity: 1; box-shadow: 0 0 30px currentColor, 0 0 60px currentColor; }
-}
-
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
 @keyframes card-shine {
   0% { transform: translateX(-100%) rotate(12deg); }
   100% { transform: translateX(200%) rotate(12deg); }
-}
-
-@keyframes gradient-x {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
 }
 
 @keyframes reveal-up {
@@ -208,34 +176,9 @@
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-@keyframes slide-up {
-  from { transform: translateY(100%); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
 @keyframes ring-rotate {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
-
-@keyframes noise-shift {
-  0% { transform: translate(0, 0); }
-  10% { transform: translate(-1%, -1%); }
-  20% { transform: translate(1%, 0%); }
-  30% { transform: translate(0%, 1%); }
-  40% { transform: translate(-1%, 0%); }
-  50% { transform: translate(1%, -1%); }
-  60% { transform: translate(0%, 1%); }
-  70% { transform: translate(-1%, -1%); }
-  80% { transform: translate(1%, 0%); }
-  90% { transform: translate(0%, -1%); }
-  100% { transform: translate(0, 0); }
-}
-
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
 }
 
 /* ═══════════════════════════════════════════
@@ -257,25 +200,7 @@
   border: 1px solid rgba(232, 233, 237, 0.08);
 }
 
-.glass-card {
-  background: rgba(26, 29, 46, 0.8);
-  backdrop-filter: blur(8px) saturate(1.2);
-  -webkit-backdrop-filter: blur(8px) saturate(1.2);
-  border: 1px solid rgba(232, 233, 237, 0.08);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.03);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.glass-card:hover {
-  background: rgba(26, 29, 46, 0.9);
-  border-color: rgba(232, 120, 42, 0.35);
-  box-shadow:
-    0 12px 40px rgba(0, 0, 0, 0.35),
-    0 0 24px rgba(232, 120, 42, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
-}
-
-/* Animated Gradient Border */
+/* Card shell (used by feed cards) */
 .card-shell {
   background: rgba(26, 29, 46, 0.85);
   border: 1px solid rgba(232, 233, 237, 0.08);
@@ -289,32 +214,6 @@
   box-shadow:
     0 16px 48px rgba(0, 0, 0, 0.35),
     0 0 24px rgba(232, 120, 42, 0.08);
-}
-
-.animated-border {
-  position: relative;
-  border-radius: 12px;
-}
-
-.animated-border::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  border-radius: inherit;
-  background: conic-gradient(from 0deg, #E8782A, #7B68EE, #5B9BD5, #9B59B6, #E8782A);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: -1;
-}
-
-.animated-border:hover::before {
-  opacity: 0.7;
-  animation: border-rotate 6s linear infinite;
-}
-
-.animated-border > * {
-  position: relative;
-  z-index: 1;
 }
 
 /* Card Shine Effect */
@@ -348,31 +247,6 @@
   animation: card-shine 0.7s ease-out forwards;
 }
 
-/* Aurora Background */
-.aurora-bg {
-  background: linear-gradient(
-    -45deg,
-    rgba(123, 104, 238, 0.18),
-    rgba(91, 155, 213, 0.14),
-    rgba(232, 120, 42, 0.1),
-    rgba(155, 89, 182, 0.14)
-  );
-  background-size: 300% 300%;
-  animation: aurora 18s ease infinite;
-}
-
-.aurora-bg-subtle {
-  background: linear-gradient(
-    -45deg,
-    rgba(123, 104, 238, 0.08),
-    rgba(91, 155, 213, 0.06),
-    rgba(232, 120, 42, 0.06),
-    rgba(155, 89, 182, 0.08)
-  );
-  background-size: 300% 300%;
-  animation: aurora 20s ease infinite;
-}
-
 /* Noise Texture Overlay */
 .noise-overlay::before {
   content: "";
@@ -384,29 +258,12 @@
   z-index: 1;
 }
 
-/* Glow Effects */
+/* Glow Effect (amber) */
 .glow-amber {
   box-shadow: 0 0 20px rgba(232, 120, 42, 0.3), 0 0 60px rgba(232, 120, 42, 0.08);
 }
 
-.glow-purple {
-  box-shadow: 0 0 20px rgba(123, 104, 238, 0.3), 0 0 60px rgba(123, 104, 238, 0.08);
-}
-
-.glow-blue {
-  box-shadow: 0 0 20px rgba(91, 155, 213, 0.3), 0 0 60px rgba(91, 155, 213, 0.08);
-}
-
-/* Text Gradient */
-.text-gradient {
-  background: linear-gradient(135deg, #E8782A 0%, #B8963E 50%, #E8782A 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradient-x 4s ease infinite;
-}
-
+/* Static text gradient */
 .text-gradient-static {
   background: linear-gradient(135deg, #E8782A, #B8963E);
   -webkit-background-clip: text;
@@ -414,26 +271,14 @@
   background-clip: text;
 }
 
-/* Hover Lift */
-.hover-lift {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
-}
-
-.hover-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 1px rgba(232, 120, 42, 0.2);
-}
-
 /* Card Reveal Animation */
 .reveal-in {
   animation: reveal-up 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
 
-/* Metallic Gradient */
+/* Metallic Gradient (static — avoids continuous background-position repaints) */
 .metallic-gradient {
   background: linear-gradient(90deg, #6B7084, #E8E9ED, #6B7084);
-  background-size: 200% 100%;
-  animation: shimmer 2s infinite;
 }
 
 /* Active Nav Indicator */
@@ -453,28 +298,6 @@
   background: linear-gradient(180deg, #E8782A, #B8963E);
   box-shadow: 0 0 8px rgba(232, 120, 42, 0.6);
 }
-
-/* Animated Focus Ring */
-.focus-glow:focus-within {
-  box-shadow: 0 0 0 2px rgba(232, 120, 42, 0.3), 0 0 20px rgba(232, 120, 42, 0.1);
-  border-color: rgba(232, 120, 42, 0.5);
-}
-
-/* Floating Animation */
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-/* Stagger delays for grid items */
-.stagger-1 { animation-delay: 0.05s; }
-.stagger-2 { animation-delay: 0.1s; }
-.stagger-3 { animation-delay: 0.15s; }
-.stagger-4 { animation-delay: 0.2s; }
-.stagger-5 { animation-delay: 0.25s; }
-.stagger-6 { animation-delay: 0.3s; }
-.stagger-7 { animation-delay: 0.35s; }
-.stagger-8 { animation-delay: 0.4s; }
-.stagger-9 { animation-delay: 0.45s; }
 
 /* ═══════════════════════════════════════════
    SCROLLBAR

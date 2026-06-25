@@ -44,7 +44,7 @@ export function CategoryTabs({ activeSection, onSectionChange }: CategoryTabsPro
               key={tab.id}
               onClick={() => onSectionChange(tab.id)}
               className={cn(
-                "flex items-center gap-1.5 whitespace-nowrap rounded-full px-3.5 py-1.5 text-sm font-medium transition-all duration-300",
+                "flex items-center gap-1.5 whitespace-nowrap rounded-full px-3.5 py-1.5 text-sm font-medium transition-[background-color,color,transform,box-shadow] duration-300",
                 isActive
                   ? "bg-gradient-to-r from-bb-amber to-bb-gold text-bb-surface-0 shadow-bb-button"
                   : "bg-white/5 text-bb-text-2 hover:bg-white/10 hover:text-bb-text-1 hover:scale-105"

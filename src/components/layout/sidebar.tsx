@@ -51,7 +51,7 @@ export function Sidebar() {
               <Link
                 key={item.id}
                 href={item.href}
-                className="flex items-center gap-3 rounded-lg bg-gradient-to-r from-bb-amber to-bb-gold px-4 py-2.5 text-sm font-bold text-bb-surface-0 shadow-bb-button hover:shadow-bb-glow-amber hover:-translate-y-0.5 transition-all duration-300"
+                className="flex items-center gap-3 rounded-lg bg-gradient-to-r from-bb-amber to-bb-gold px-4 py-2.5 text-sm font-bold text-bb-surface-0 shadow-bb-button hover:shadow-bb-glow-amber hover:-translate-y-0.5 transition-[transform,box-shadow] duration-300"
               >
                 <Icon className="h-5 w-5" strokeWidth={2.5} />
                 {t(item.labelKey)}
@@ -64,7 +64,7 @@ export function Sidebar() {
               key={item.id}
               href={item.href}
               className={cn(
-                "flex items-center gap-3 rounded-lg px-4 py-2.5 text-sm font-medium transition-all duration-200",
+                "flex items-center gap-3 rounded-lg px-4 py-2.5 text-sm font-medium transition-colors duration-200",
                 isActive
                   ? "text-bb-amber bg-bb-amber/10 nav-glow"
                   : "text-bb-text-2 hover:text-bb-text-1 hover:bg-white/5"
@@ -94,7 +94,7 @@ export function Sidebar() {
                 key={section.id}
                 href={section.route}
                 className={cn(
-                  "flex items-center gap-3 rounded-lg px-4 py-2 text-sm transition-all duration-200 group",
+                  "flex items-center gap-3 rounded-lg px-4 py-2 text-sm transition-colors duration-200 group",
                   isActive
                     ? "text-bb-text-1 bg-white/5"
                     : "text-bb-text-3 hover:text-bb-text-1 hover:bg-white/5"
@@ -102,7 +102,7 @@ export function Sidebar() {
               >
                 {Icon && (
                   <div
-                    className={cn("transition-all duration-200", isActive ? "opacity-100" : "opacity-60 group-hover:opacity-100")}
+                    className={cn("transition-opacity duration-200", isActive ? "opacity-100" : "opacity-60 group-hover:opacity-100")}
                     style={{ color: section.color }}
                   >
                     <Icon className="h-4 w-4" />
@@ -120,7 +120,7 @@ export function Sidebar() {
 
       {/* User Area */}
       <div className="relative z-10 border-t border-white/5 p-4">
-        <button className="flex items-center gap-3 w-full rounded-lg px-2 py-2 hover:bg-white/5 transition-all duration-200">
+        <button className="flex items-center gap-3 w-full rounded-lg px-2 py-2 hover:bg-white/5 transition-colors duration-200">
           <GradientAvatar
             color={user.avatarColor}
             initial={user.avatarInitial}
