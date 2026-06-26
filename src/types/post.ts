@@ -44,4 +44,5 @@ export interface Post {
   isFeatured: boolean;
   createdAt: string;
   poll?: Poll;
+  videoUrl?: string;
 }

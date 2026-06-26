@@ -25,6 +25,7 @@ interface SupabasePost {
   is_featured: boolean;
   poll: Poll | null;
   created_at: string;
+  video_url: string | null;
 }
 
 function mapSupabasePost(row: SupabasePost): Post {
@@ -55,6 +56,7 @@ function mapSupabasePost(row: SupabasePost): Post {
     isFeatured: row.is_featured,
     createdAt: row.created_at,
     poll: row.poll || undefined,
+    videoUrl: row.video_url || undefined,
   };
 }
 

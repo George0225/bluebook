@@ -13,6 +13,7 @@ import { getCommentsByPostId } from "@/data/mock-comments";
 import { SECTIONS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
+import { parseVideoUrl } from "@/lib/video";
 
 export function PostDetailContent({ postId }: { postId: string }) {
   const { t } = useI18n();
@@ -49,7 +50,19 @@ export function PostDetailContent({ postId }: { postId: string }) {
   return (
     <ResponsiveShell showBack>
       <div className="max-w-2xl mx-auto py-6 px-4 space-y-6">
-        <GradientCover gradient={post.coverGradient} aspectRatio={post.coverAspectRatio * 0.7} className="rounded-card" />
+        {post.videoUrl && parseVideoUrl(post.videoUrl) ? (
+          <div className="relative w-full rounded-xl overflow-hidden" style={{ paddingBottom: "56.25%" }}>
+            <iframe
+              src={parseVideoUrl(post.videoUrl)!.embedUrl}
+              className="absolute inset-0 w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title={post.title}
+            />
+          </div>
+        ) : (
+          <GradientCover gradient={post.coverGradient} aspectRatio={post.coverAspectRatio * 0.7} className="rounded-card" />
+        )}
 
         <div className="space-y-3">
           <div className="flex items-center gap-2">

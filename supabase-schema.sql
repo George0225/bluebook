@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS posts (
   is_hot BOOLEAN NOT NULL DEFAULT false,
   is_featured BOOLEAN NOT NULL DEFAULT false,
   poll JSONB,
+  video_url TEXT,
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 

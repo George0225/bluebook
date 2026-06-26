@@ -28,6 +28,7 @@ interface PostTemplate {
   isFeatured?: boolean;
   type?: "image-text" | "long-text" | "poll";
   poll?: Post["poll"];
+  videoUrl?: string;
 }
 
 const templates: PostTemplate[] = [
@@ -81,6 +82,7 @@ const templates: PostTemplate[] = [
     content: "PUA（Pick Up Artist）话术已经从最初的'搭讪技巧'演变成了一套系统性的情感操控手段。以下是核心套路解析：\n\n**1. 打压（Neg）**\n'你挺好看的，就是有点胖'\n目的：降低你的自信，让你觉得自己需要讨好对方\n\n**2. 推拉**\n忽冷忽热，让你产生'间歇性强化'的依赖\n\n**3. 否定（Disqualification）**\n'我们不合适' — 让你反过来追求证明自己\n\n**4. 时间桥**\n制造'下次一起做XX'的约定，提前锁定未来互动\n\n**5. 服从升级**\n从小要求开始，逐步升级到不合理的要求\n\n**防御原则：**\n- 关注行为而非言语\n- 保持社交圈独立性\n- 信任自己的不适感",
     sectionId: "awareness",
     tags: ["PUA", "防身术", "情感安全"],
+    videoUrl: "https://www.youtube.com/watch?v=4zGBcPnI61I",
   },
   {
     title: "城市避坑地图：这些场所消费套路深",
@@ -107,6 +109,7 @@ const templates: PostTemplate[] = [
     tags: ["社交心理", "饭局文化", "行为分析"],
     isHot: true,
     isFeatured: true,
+    videoUrl: "https://www.bilibili.com/video/BV1x54y1e7zf",
   },
   {
     title: "朋友圈鉴赏：晒奢侈品但不露logo是什么操作？",
@@ -163,6 +166,7 @@ const templates: PostTemplate[] = [
     tags: ["艾尔登法环", "攻略", "DLC"],
     isHot: true,
     isFeatured: true,
+    videoUrl: "https://www.youtube.com/watch?v=OT8if6WBMB8",
   },
   {
     title: "2026年最值得入手的显卡推荐｜4060到4090全面对比",
@@ -171,6 +175,7 @@ const templates: PostTemplate[] = [
     sectionId: "gaming",
     tags: ["显卡推荐", "硬件评测", "装机"],
     isFeatured: true,
+    videoUrl: "https://www.youtube.com/watch?v=wnRqcEFBias",
   },
   {
     title: "组队找人：周末晚上打Valorant排位",
@@ -202,6 +207,7 @@ const templates: PostTemplate[] = [
     content: "## 画面 ★★★★☆\n纳塔的地图设计是原神目前最好的。火山、丛林、水下场景都做得很精致。\n\n## 玩法 ★★★★\n新增了龙伙伴系统和变身机制，战斗体验有明显提升。\n\n## 氪金度 ★★★\n新角色的强度设计比较合理，不强制绑定特定队伍。\n\n## 总评\n如果你是老玩家回坑，纳塔版本值得一试。如果你是新玩家，建议先玩到30级再决定是否投入。\n\n**优点：**\n- 地图探索体验极佳\n- 新系统增加了游戏深度\n- 音乐依然是一流水准\n\n**缺点：**\n- 部分解谜过于复杂\n- 日常任务仍然重复\n- 树脂系统限制太多",
     sectionId: "gaming",
     tags: ["原神", "评测", "新版本"],
+    videoUrl: "https://www.bilibili.com/video/BV1GJ411x7h7",
   },
   {
     title: "Steam夏促必买清单：50款打折神作推荐",
@@ -228,6 +234,7 @@ const templates: PostTemplate[] = [
     tags: ["新手指南", "三大项", "训练计划"],
     isHot: true,
     isFeatured: true,
+    videoUrl: "https://www.youtube.com/watch?v=R6gZoAzAhCg",
   },
   {
     title: "身材进化记录：6个月从70kg到78kg的真实变化",
@@ -258,6 +265,7 @@ const templates: PostTemplate[] = [
     content: "## 1. 圆肩（上交叉综合征）\n\n**原因：** 长期伏案，胸肌紧、背部弱\n**解决方案：**\n- 门框拉伸胸肌：30秒×3组\n- 弹力带面拉：15次×3组\n- 靠墙天使：12次×3组\n\n## 2. 头前伸\n\n**原因：** 看手机/显示器\n**解决方案：**\n- 下巴收缩：保持5秒×10次\n- 颈部后侧拉伸：每侧30秒\n\n## 3. 骨盆前倾\n\n**原因：** 久坐导致髋屈肌紧、腹肌弱\n**解决方案：**\n- 半跪髋屈肌拉伸：30秒×3组\n- 死虫式：12次×3组\n- 臀桥：15次×3组\n\n## 4. 膝超伸\n\n**原因：** 大腿后侧弱\n**解决方案：**\n- 罗马尼亚硬拉\n- 腿弯举\n\n## 5. 扁平足\n\n**解决方案：**\n- 脚趾抓毛巾\n- 单腿站立平衡",
     sectionId: "fitness",
     tags: ["体态纠正", "办公族", "健康"],
+    videoUrl: "https://www.youtube.com/watch?v=g-7ZWPCWv0U",
   },
   {
     title: "补剂红黑榜：哪些值得买，哪些是智商税",
@@ -277,6 +285,7 @@ const templates: PostTemplate[] = [
     tags: ["副业", "自媒体", "实操分享"],
     isHot: true,
     isFeatured: true,
+    videoUrl: "https://www.youtube.com/watch?v=snAhsXyO3Ck",
   },
   {
     title: "投资踩坑实录：我在A股亏了30万学到的教训",
@@ -352,6 +361,7 @@ function generatePost(template: PostTemplate, index: number): Post {
     isFeatured: template.isFeatured || false,
     createdAt: date.toISOString(),
     poll: template.poll,
+    videoUrl: template.videoUrl,
   };
 }
 
